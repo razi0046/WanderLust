@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+    <script>
+        let mapToken="<%= process.env.MAP_TOKEN %>";
+        let latitude="<%= partList.coordinates.latitude%>";
+        let longitude="<%= partList.coordinates.longitude%>";
+    </script>
+    <h3>Listings Details</h3>
+    <div class="view-container">
+        <div class="list-title">
+           <h3 class="list-head"><%= partList.title %></h3>
+        </div>
+        <div class="list-img">
+           <img src=" <%= partList.image.url %>" alt="" >
+        </div>
+        <div class="highlights">
+            <div class="descriptionList">
+                <h4>Description :</h4>
+                <p class="listDescription"><%= partList.description %></p>
+            </div>
+            <h4 class="highlights">
+                Highlights
+            </h4>
+            <ul>
+                    <li>&#8377; <%= partList.price.toLocaleString("en-IN")%>/day</li>
+                    <li><%= partList.location %></li>
+                    <li> Owned By : <i> @ <b><%= partList.owner.username %></b></i></li>
+                    <li><%= partList.country%>  </li>   
+               
+            </ul>
+        </div>
+    </div>
+   
+    <div class="action-btns ">
+        <div class="submit-btn">
+            <form method="get" action="/listings/<%= partList._id %>/edit">
+                <button type="submit">Edit Listing</button>
+            </form>
+        </div>
+        <div class="delete-btn">
+            <form action="/listings/<%= partList._id %>/delete?_method=DELETE" method="post">
+                <button type="submit">Delete Listing</button>
+            </form>
+
+        </div>
+    </div>
+    <hr>
+ 
+
+    <div class="review-section">
+        <div class="reviews">
+            <form action="/listings/<%= partList._id %>/review" novalidate class="forms needs-validation" method="post">
+                <h4>Drop Your Review :</h4>
+                <p class="rating-head">Ratings</p>
+                <fieldset class="starability-slot">
+                    <input type="radio" id="no-rate" class="input-no-rate" name="reviewVal[rating]" value="1" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="reviewVal[rating]" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="reviewVal[rating]" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="reviewVal[rating]" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="reviewVal[rating]" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="reviewVal[rating]" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                  </fieldset>
+                <textarea name="reviewVal[comment]" class="comment form-control" cols="30" rows="5" placeholder="Drop A Comment!" required></textarea>
+                <div class="sub-btn">
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    <hr>
+    <% if(partList.reviews.length>0){ %>
+        <div class="AllReviews">
+            <h4>All Reviews</h4>
+           <div class="row">
+            <% for(rev of partList.reviews) { %>
+                <div class="card col-5 ms-3 mb-3 mt-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-body-secondary">@<%= rev.reviewOwner.username %></h6>
+                        <p class="starability-result" data-rating="<%= rev.rating  %>">
+                        </p>
+                      <p class="card-text mt-3"><%= rev.comment %></p>
+                      <form action="/listings/<%= partList._id %>/reviews/<%= rev._id %>?_method=DELETE" method="post">
+                        <button type="submit" class="btn btn-dark">Delete</button>
+                      </form>
+                    </div>
+                  </div>
+            <% } %>
+           </div>
+        </div>
+        <hr>
+        <% } %>
+    </div>
+
+        <div class=" map-section">
+            <h3>Where You'll Be</h3>
+            <div id="map"></div>
+        </div>
+
+   
+</body>
+<!-- </html> -->

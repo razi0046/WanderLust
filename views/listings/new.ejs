@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2 class="Add-head">Add A New listing</h2>
+    <p><b>Please Fill Up The Form</b></p>
+    <div class="newForm">
+        <form method="post" action="/listings/new" novalidate class="forms needs-validation" enctype="multipart/form-data">
+            <div class="list-img">
+                <p class="input-name">Title</p>
+                <input type="text" name="Listings[title]" placeholder="Enter Your Title Here..." class="title form-control" required>
+            </div>
+            <div class="text-area">
+                <p class="inp-text-area">Description</p>
+                <textarea name="Listings[description]"  cols="30" rows="5"placeholder="Enter Your Description..." required class="form-control"></textarea>
+            </div>
+             <div class="input-image">
+                <p>Upload Image</p>
+                 <div class="input-group mb-3">
+                      <input type="file" class="form-control" id="inputGroupFile02" name="Listings[image]">
+                      <label class="input-group-text" for="inputGroupFile02" >Upload</label>
+                    </div>             
+             </div>
+          
+            <div class="price-country">
+                <label for="price" class="prce">Price</label>
+                <input type="text" name="Listings[price]" class="price form-control" placeholder="Price" required>
+                <label for="country" class="cntry">Country</label>
+                <input type="text" name="Listings[country]" class="country form-control" placeholder="Enter Country" required>
+            </div>
+           <div class="location">
+            <p>Location</p>
+            <input type="text" name="Listings[location]" placeholder="Enter Location..." class="location form-control" required>
+           </div>
+    
+            <div class="submit-btn">
+                <button type="submit">Add Listing</button>
+            </div>
+        </form>
+    </div>
+  
+</body>
+<!-- </html> -->

@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3 class="edit-head">Edit your Listing</h3>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="forms needs-validation" enctype="multipart/form-data" novalidate>
+      <div class="input-name">
+       <p class="input-title">Title</p>
+        <input name="Listings[title]" value="<%= listing.title %>" type="text" class="form-control"/>
+      </div>
+      <div class="text-area">
+       <p class="inp-text-area">Description</p>
+        <textarea name="Listings[description]" rows="8" cols="38" class="form-control">
+  <%= listing.description %></textarea
+        >
+      </div>
+      <div class="card" id="Image-preview" style="width: 18rem;">
+        <div class="card-body">
+          <p class="card-text mt-3">Original Image</p>
+        </div>
+        <img src="<%= originalImageUrl %>" class="card-img-top" >
+      </div>
+      <div class="input-image">
+        <p>Upload Image</p>
+         <div class="input-group mb-3">
+              <input type="file" class="form-control" id="inputGroupFile02" name="Listings[image]">
+              <label class="input-group-text" for="inputGroupFile02" >Upload</label>
+            </div>             
+     </div>
+      <div class="price-country">
+        <label for="price">Price</label>
+        <input name="Listings[price]" value="<%= listing.price %>" type="number" class="price" class="form-control"/>
+         <label for="country" class="cntry">Country</label>
+        <input
+          name="Listings[country]"
+          value="<%= listing.country %>"
+          type="text"
+          class="country form-control"
+        />
+      </div>
+      <div class="location">
+        <p class="location">Location</p>
+        <input
+          name="Listings[location]"
+          value="<%= listing.location %>"
+          type="text"
+          class="form-control"
+        />
+      </div>
+      <div class="submit-btn">
+        <button type="submit">Make Changes</button>
+      </div>
+    </form>
+</body>
+<!-- </html> -->

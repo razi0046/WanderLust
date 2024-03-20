@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "medium";
+    src: url("Poppins/Poppins-medium.ttf");
+}
+@font-face {
+    font-family: "regular";
+    src: url("Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "light";
+    src: url("Poppins/Poppins-Light.ttf");
+}
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.navbar{
+    height: 5rem !important;
+    padding: 12px 14px !important;
+    background-color: white !important;
+    width: 100% !important;
+}
+
+.logo{
+    font-family: "medium";
+}
+.fa-regular{
+    margin-left: 3rem;
+    color: #fe424d !important;
+}
+.allLists{
+    color: black;
+    text-decoration: none;
+}
+.allListingsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.lists{
+    margin-top: 10px;
+}
+.heading{
+    margin-top: 30px;
+}
+html{
+    height: 100%;
+}
+footer{
+    margin-top:auto;
+    width: 100% ;
+    background-color:#adb5bd;
+    padding: 20px 25px ;
+    height: 10rem;
+    bottom: 1;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer div{
+    margin-top: 15px;
+}
+.icons a{
+    color: black;
+    font-size: 25px;
+    margin-left: 16px;
+}
+.listings-card{
+    border: none !important;
+    margin-top: 35px !important;
+    margin-right: 1.5rem !important;
+
+}
+#listing-price{
+    margin-top: 8px !important;
+    font-family: "light" !important;
+
+}
+#listing-title{
+    margin-top: 10px !important;
+}
+.card-img-top{
+    height: 20rem !important;
+    border-radius: 15px !important;
+}
+.forms{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.forms input{
+    font-family: "regular";
+    font-weight: 500;
+    border-radius: 10px;
+}
+.edit-head{
+    margin-top: 30px;
+}
+.list-title h3{
+    margin-top: 30px;
+}
+.text-area{
+    margin-top: 24px;
+}
+.input-name .input-title{
+    font-family: "regular";
+    font-size: 20px;
+}
+.input-name{
+    margin-top: 20px;
+}
+.input-name input{
+    width: 80%;
+    height: 3.5rem;
+    padding: 12px 15px;
+   
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.text-area{
+    margin-top: 20px;
+}
+.text-area textarea{
+    border-radius: 10px;
+    font-family: "regular";
+    font-weight: 500;
+}
+.text-area p{
+    font-family: "regular";
+    font-size: 20px;
+}
+.text-area textarea{
+    font-size: 20px;
+    padding: 14px 18px;
+    width: 80%;
+    height: 10rem;
+    border: 1px solid gray;
+   
+}
+.list-img{
+    margin-top: 25px;
+}
+.list-img p{
+    font-family: "regular";
+    font-size: 20px;
+}
+.list-img input{
+    width: 80%;
+    height: 3.5rem;
+    padding: 12px 15px;
+    border: 1px solid gray;
+}
+.price-country{
+    margin-top: 24px;
+    display: flex;
+}
+.input-image p{
+    margin-top: 16px;
+    font-family: "regular";
+    font-size: 20px;
+}
+.input-image input{
+    width: 50% !important;
+    height: 2.5rem !important;
+}
+.price-country label{
+    font-family: "regular";
+    font-size: 20px;
+}
+.price-country .price{
+    width: 30%;
+    border: 1px solid gray;
+    margin-left: 15px;
+    padding: 14px 18px;
+    height: 2.5rem;
+}
+.price-country .country{
+    width: 30%;
+    border: 1px solid gray;
+    margin-left: 15px;
+    padding: 14px 18px;
+    height: 2.5rem;
+}
+
+.price-country p{
+    margin-left: 3rem;
+}
+
+.location{
+    margin-top: 10px;
+}
+.location p{
+    font-family: "regular";
+    font-size: 20px;
+}
+.location input{
+    width: 30%;
+    border: 1px solid gray;
+   
+    padding: 14px 18px;
+    height: 2.5rem;
+}
+.submit-btn{
+    margin-top: 18px;
+    margin-bottom: 15px;
+    display: flex;
+}
+.submit-btn button{
+    padding: 12px 14px;
+    width: 10rem;
+    border-radius: 20px;
+    border: 1px solid ;
+    background-color: #fe424d;
+    color: white;
+    font-family: "regular";
+    font-weight: 500;
+}
+.nav-link{
+    font-family: "regular" !important;
+    font-weight: 500 !important;
+}
+.nav-link:hover{
+    color: #fe424d !important;
+    transition: 0.3s color ease-in !important;
+}
+.Add-head{
+    margin-top: 20px;
+}
+.view-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.view-container div{
+    margin-top: 28px;
+}
+.list-head{
+    font-family: "medium";
+}
+.list-img img{
+    height: 48rem;
+    width: 45rem;
+    border-radius: 15px;
+}
+.delete-btn{
+    margin-left: 25px;
+}
+#delete-btn{
+    margin-left: 25px;
+    padding: 12px 14px;
+    width: 10rem;
+    border-radius: 20px;
+    border: 1px solid transparent ;
+    background-color: black;
+    color: white;
+    font-family: "regular";
+    font-weight: 500;
+}
+.delete-btn form button{
+    padding: 12px 14px;
+    width: 10rem;
+    border-radius: 20px;
+    border: 1px solid transparent ;
+    background-color: black;
+    color: white;
+    font-family: "regular";
+    font-weight: 500;
+}
+.action-btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.highlights ul li{
+    font-size: 18px;
+    font-family: "regular";
+}
+.listDescription{
+    font-family: "regular";
+    font-size: 18px;
+}
+.rating-head{
+    font-family: "regular";
+    font-size: 18px;
+}
+.review-section{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.comment{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    border-radius: 15px !important;
+    font-family: "regular" !important;
+    font-size: 18px !important;
+    padding: 12px 14px !important;
+}
+.btn-outline-primary{
+    background-color: transparent !important;
+    color:black !important;
+    font-weight: 400 !important;
+    border:1px solid #fe424d !important;
+}
+.btn-outline-primary:hover{
+    background-color: #fe424d !important;
+    color: aliceblue !important;
+    border: #fe424d;
+}
+.AllReviews{
+    margin-top: 35px;
+}
+.card-text{
+    font-family: "light" !important;
+    
+}
+.navbar-collapse{
+    display: flex;
+    justify-content: space-between;
+    border: none !important;
+}
+.navbar-nav2{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 18px;
+}
+.navbar-nav2 a{
+    margin-right: 18px;
+    font-weight: 500;
+}
+.sign-head{
+    margin-top: 20px;
+    font-family: "medium";
+}
+.submit-btns{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+#Image-preview{
+    border: none !important;
+}
+#Image-preview p{
+    font-family: "regular" !important;
+}
+#map{
+    height: 400px;
+    width: 80vh;
+}
+.login-sign-up{
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.login-sign-up form{
+    height: 60%;
+    width: 80%;
+}
+.login-input p{
+    font-family: "regular";
+    margin-top: 16px;
+    font-size: 18px;
+}
+.login-input{
+    padding: 10px 14px;
+}
+.login-input input{
+   padding: 12px 14px;
+}
+
+.submit-btns button{
+    padding: 8px 10px;
+    width: 8rem;
+    border-radius: 16px;
+    border: 1px solid ;
+    background-color: #fe424d;
+    color: white;
+    font-family: "regular";
+    font-weight: 300;
+    margin-left: 40%;
+}
+.map-section{
+    padding: 14px 16px;
+    width: 100%;
+    height: 40%;
+}
+.map-section #map{
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+.filters{
+  margin-top: 16px;
+  border: 1px solid transparent;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  padding: 10px 14px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+.filter {
+    margin-left: 25px;
+}
+.filter p{
+    margin-top: 1rem;
+    font-family: "light";
+}
+.filter i{
+   font-size: 20px;
+   opacity: 0.7;
+}
+.filter i:hover{
+    opacity: 1;
+    transition: opacity .3s ;
+}
+.filter p:hover{
+    color: #fe424d;
+    transition: color 0.3s;
+}
+.filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    margin-top: 14px;
+}
+.me-2{
+    width: 18rem !important;
+    padding: 10px 12px !important;
+    border-radius: 25px !important;
+    border: 2px solid gainsboro !important;
+    font-family: "light" !important;
+}
+.btn-outline-success{
+    width: 7.5rem !important;
+    border-radius: 30px !important;
+    border: 1px solid transparent !important;
+    background-color: #fe424d !important;
+    color: white !important;
+    font-family: "light" !important;
+
+}
+.icons i{
+   opacity: 0.6;
+   transform: scale(1);
+}
+.icons i:hover{
+    opacity: 1;
+    transform: scale(1.4);
+    transition: opacity 0.6s ease-in transform 0.6s ease-in;
+}
+@media (max-width:500px){
+    *{
+        flex-wrap: wrap;
+    }
+    .logo{
+        font-size: 1.6rem!important;
+    }
+    .container{
+        padding: 12px 18px;
+    }
+    .allListingsContainer{
+        padding: 8px;
+    }
+    .list-img{
+        padding: 10px 14px;
+    }
+    .list-img img{
+        height: 30%;
+        width: 100%;
+    }
+   .map-section{
+    padding: 12px 14px;
+    width: 100%;
+    height: 40%;
+   }
+   .map-section #map{
+    width: 100%;
+   }
+   .review-section{
+    padding: 12px 16px;
+   }
+   .action-btns div button{
+    width: 8.5rem;
+    height: 3rem;
+   }
+   .delete-btn button{
+    height: 2.5rem;
+   }
+   .view-container p{
+    font-size: 16px;
+   }
+   .view-container h4{
+    font-size: 20px;
+   }
+   .filters{
+    display: none;
+   }
+   .login-sign-up{
+    flex-wrap: wrap;
+   }
+   .forms div{
+    padding: 10px 14px;
+   }
+   .price-country{
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+   }
+   .price-country .price{
+    width: 60%;
+   }
+   .price-country .country{
+    width: 60%;
+   }
+   .cntry{
+    margin-top: 16px;
+   }
+   .prce{
+    margin-top: 8px;
+   }
+   .location input{
+    width: 60%;
+   }
+   
+   .navbar-nav a{
+    margin-top: 8px;
+   }
+   .navbar-nav2{
+       display: block;
+    }
+    .navbar-nav2 a{
+     margin-top: 12px;
+    }
+    .btn-outline-success{
+        width: 6rem !important;
+        margin-top: 12px;
+    }
+    .login-sign-up{
+        margin-bottom: 17rem;
+    }
+    .me-2{
+        margin-top: 12px;
+    }
+}

@@ -1,0 +1,20 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="login-sign-up">
+        <h4 class="sign-head">Quick Login</h4>
+        <form action="/login" method="post" class=" needs-validation" novalidate>
+            <div class="login-input " >
+                <p>Username</p>
+                <input type="username" name="username" class="login-user form-control" placeholder="Enter Your Username Here..." required>
+            </div>
+            <div class="login-input" >
+                <p>Password</p>
+                <input type="password" name="password" class="login-user form-control password" placeholder="Enter Your Password..." required>
+            </div>
+            <div class="submit-btns">
+                <button type="submit" class="btn btn-primary" >Log In</button>
+            </div>
+        </form>
+    </div>
+   
+</body>

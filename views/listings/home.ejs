@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="filters">
+    <div class="filter">
+      <i class="fa-solid fa-umbrella-beach"></i>
+      <p>Beach</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-tractor"></i>
+      <p>Farm</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-mountain-city"></i>
+      <p>Mountain</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-person-swimming"></i>
+      <p>Pool</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-sailboat"></i>
+      <p>Boats</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-person-snowboarding"></i>
+      <p>Hilly</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-mountain-sun"></i>
+      <p>Views</p>
+    </div>
+    <div class="filter">
+      <i class="fa-brands fa-fort-awesome"></i>
+      <p>Castles</p>
+    </div>
+    <div class="filter">
+      <i class="fa-brands fa-vine"></i>
+      <p>Vines</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-house-chimney"></i>
+      <p>Houses</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-campground"></i>
+      <p>Camping</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-igloo"></i>
+      <p>Igloos</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-golf-ball-tee"></i>
+      <p>Golfs</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-fire"></i>
+      <p>Trending</p>
+    </div>
+  </div>
+
+    <h3 class="heading"> All Listings</h3>
+    <div class="allListingsContainer">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+            <% for(let list of allListings){%>
+              <div class="listings-card mb-3" style="width: 22rem;">
+                  <img src="<%= list.image.url %>" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title mt-2 " id="listings-title"><%= list.title %></h5>
+                    <p class="card-text" id="listing-price">&#8377;<%= list.price.toLocaleString("en-IN")%>/ night. </p>
+                    <a href="/listings/<%= list._id %>/show" class="btn btn-primary">View Listing</a>
+                  </div>
+                </div>
+                <% } %>
+        </div>    
+    </div>
+</body>
+<!-- </html> -->
