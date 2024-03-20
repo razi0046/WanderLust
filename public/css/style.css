@@ -557,4 +557,7 @@ footer{
     .me-2{
         margin-top: 12px;
     }
+    .listings-card{
+      width: 18rem !important;
+    }
 }
