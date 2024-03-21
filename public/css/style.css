@@ -560,4 +560,7 @@ footer{
     .listings-card img{
       width: 18rem !important;
     }
+    .login-input input{
+     width : 80%;
+    }
 }
